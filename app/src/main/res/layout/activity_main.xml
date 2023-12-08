@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp">
+
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        app:title="Okto Wallet"
+        android:layout_height="?attr/actionBarSize" />
+
+    <TextView
+        android:id="@+id/tv_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/result_will_appear_here"
+        android:background="@color/teal_bg"
+        android:padding="16dp"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_get_wallets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/get_wallets" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_get_supported_tokens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/get_supported_tokens" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_get_supported_networks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/get_supported_networks" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_wallet_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/get_order_history" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_get_portfolio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/get_portfolio" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_network_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:hint="@string/network_name"
+        android:layout_marginTop="24dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_token_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:hint="@string/token_address"
+        android:layout_marginTop="24dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_recipient_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:hint="@string/recipient_address"
+        android:layout_marginTop="24dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:hint="@string/quantity"
+        android:layout_marginTop="24dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_transfer_funds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/transfer_funds" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/raw_network"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:hint="@string/raw_network"
+        android:layout_marginTop="24dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/raw_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:hint="@string/data"
+        android:layout_marginTop="24dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/raw_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:hint="@string/from"
+        android:layout_marginTop="24dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/raw_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:hint="@string/to"
+        android:layout_marginTop="24dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/raw_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:hint="@string/value"
+        android:layout_marginTop="24dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_raw_execute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/execute_raw" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_fetch_raw_order_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/raw_order_status" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_get_user_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/get_user_details" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logout" />
+
+
+
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,72 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'tech.okto.oktowalletsample'
+    compileSdk 34
+
+    defaultConfig {
+
+        applicationId "tech.okto.wallet_sample_dino"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+def localProperties = new Properties()
+file("../local.properties").withInputStream { localProperties.load(it) }
+repositories {
+    maven {
+        url 'https://storage.googleapis.com/download.flutter.io'
+    }
+//    maven {
+//        url "../../maven-repo"
+//    }
+    maven{
+        url "https://maven.pkg.github.com/coindcx-okto/okto-mobile-sdk"
+        credentials {
+            username = "oktoWallet"
+            password = "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"
+        }
+    }
+    mavenCentral()
+    google()
+}
+
+dependencies {
+    implementation 'tech.okto.core_sdk.okto_core:flutter_release:1.00.007'
+    implementation 'tech.okto.wallet:oktowallet:1.00.007'
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.5'
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+    implementation 'androidx.core:core-ktx:+'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
